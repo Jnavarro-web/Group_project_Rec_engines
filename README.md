@@ -1,4 +1,4 @@
-# GROUP 2 — Apartment Recommendation System
+# GROUP 12 — Apartment Recommendation System
 ### Inside Airbnb Madrid · Recommender Systems Course
 
 ## Team
