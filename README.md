@@ -2,7 +2,7 @@
 ### Inside Airbnb Madrid · Recommender Systems Course
 
 ## Team
-Sofia Navarro · Marco Vidal · Lena Brandt · James O'Brien · Yuki Tanaka
+Jimena Navarro · Tessa Correig · Paula Evangelista · Bernarda Andrade · Daniel Teixidor · Sofía Serantes 
 
 ---
 
