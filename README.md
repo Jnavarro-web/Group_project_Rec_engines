@@ -16,7 +16,7 @@ The notebooks use the real Inside Airbnb Madrid dataset. **You must download the
 
 Place both files in the `data/` folder:
 ```
-GROUP_2_project/
+GROUP_12_project/
 └── data/
     ├── listings.csv.gz     ← download this
     └── reviews.csv         ← download this
@@ -45,7 +45,7 @@ End-to-end recommendation system comparing four approaches on 25,000 Madrid Airb
 ## Repository Structure
 
 ```
-GROUP_2_project/
+GROUP_12_project/
 ├── data/
 │   ├── listings.csv.gz        ← download from Inside Airbnb
 │   └── reviews.csv            ← download from Inside Airbnb
@@ -55,8 +55,8 @@ GROUP_2_project/
 ├── 03_content_based.ipynb     ← feature engineering + query interface
 ├── 04_context_aware.ipynb     ← seasonal CARS + context analysis
 ├── 05_evaluation.ipynb        ← comparison table + A/B test + bias
-├── GROUP_2_report.md          ← full written report (§1–12)
-├── GROUP_2_executive_summary.md
+├── GROUP_12_report.md          ← full written report (§1–12)
+├── GROUP_12_executive_summary.md
 └── README.md
 ```
 
