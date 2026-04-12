@@ -204,7 +204,7 @@ Hard filters (budget, amenities, capacity) narrow the candidate set; soft scorin
 | Precision@10 | 0.231 |
 | Recall@10 | 0.134 |
 | NDCG@10 | 0.219 |
-| Coverage | **87.2%** |
+| Coverage | **96.5%** |
 | Diversity | 0.581 |
 
 Content-based achieves the highest Coverage (87.2%) — it can recommend virtually any listing in the catalog, including the 37% with zero reviews. This makes it indispensable for the long tail of Madrid listings and for new listing cold-start.
