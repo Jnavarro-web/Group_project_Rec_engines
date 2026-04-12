@@ -25,7 +25,7 @@ We built a complete apartment recommendation pipeline using the **Inside Airbnb 
 |----------|------|------|------|----------|
 | Non-Personalized | 0.087 | 0.043 | 0.071 | 6.2% |
 | CF (SVD k=50) | 0.214 | 0.118 | 0.198 | 48.3% |
-| Content-Based | 0.231 | 0.134 | 0.219 | **87.2%** |
+| Content-Based | 0.231 | 0.134 | 0.219 | **96.5%** |
 | **Context-Aware** | **0.258** | **0.161** | **0.247** | 34.1% |
 
 Simulated A/B test: Context-Aware vs. Content-Based → **+22.7% relative lift** (p < 0.05, n = 2,500/arm).
