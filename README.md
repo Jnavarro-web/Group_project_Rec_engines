@@ -99,7 +99,7 @@ All figures save automatically to `figures/`.
 | Precision@10 | 0.087 | 0.214 | 0.231 | **0.258** |
 | Recall@10 | 0.043 | 0.118 | 0.134 | **0.161** |
 | NDCG@10 | 0.071 | 0.198 | 0.219 | **0.247** |
-| Coverage | 6.2% | 48.3% | **87.2%** | 34.1% |
+| Coverage | 6.2% | 48.3% | **96.5%** | 34.1% |
 | Diversity | 0.201 | **0.634** | 0.581 | 0.612 |
 
 Simulated A/B test: Context-Aware vs Content-Based → **+22.7% lift (p < 0.05)**.  
