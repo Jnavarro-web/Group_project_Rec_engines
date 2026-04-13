@@ -482,6 +482,7 @@ Bias analysis reveals geographic concentration (Centro over-represented by 31%) 
 | Team Member | Primary Responsibility 
 |-------------|----------------------
 | Tessa Correig | Collaborative filterign 
+| Sofia Serantes | Content Based 
 | xxxx | xxx
 
 | **All** | Meetings, integration testing, presentation prep
