@@ -227,66 +227,45 @@ is inherently very low (theoretical ceiling ≈ 10/9,385 ≈ 0.001). These metri
 interactions. RMSE (0.486), MAE (0.263), and Diversity (0.357) are reliable indicators at this evaluation scale.
 
 ---
-
 ## 5. Content-Based Recommender
 
-### 5.1 Why Content-Based Shines in This Domain
+### 5.1 Approach Description
 
-1. **Cold-start robustness** — works with 1 review or even zero (via questionnaire)
-2. **Explainability** — "You stayed in budget private rooms near Sol — here are similar options"
-3. **Long-tail discovery** — can recommend any listed property, including new/obscure listings
+Content-based filtering recommends listings similar to a traveler's stated preferences or past interactions, using listing features alone. Key advantages: (a) no interaction data needed — cold-start robust; (b) explainable — "we recommend this because it has a kitchen and is in your preferred neighbourhood"; (c) can recommend any listing in the catalog including brand-new ones.
 
-### 5.2 User Profile Construction
+### 5.2 Feature Engineering
 
+We build a 45-dimensional listing feature vector (Section 2.2) supplemented by a 150-dimensional TF-IDF description embedding. The hybrid similarity score:
 ```
-profile(u) = Σ[(r(u,i) − r̄_u) × features(i)] / Σ|r(u,i) − r̄_u|
-```
-
-Encodes the user's "ideal listing" in 97-dimensional feature space. A user who consistently reviews cheap private rooms in central neighborhoods produces a profile with high weight on Centro, private_room, and low price dimensions.
-
-### 5.3 Prediction
-
-**Cosine:** `r̂(u,i) = r̄_u + cosine_sim(profile(u), features(i)) × σ_u`
-
-**Ridge regression variant:** Per-user Ridge models (α = 0.5) learn asymmetric feature weights (e.g., a user who cares mostly about location weight it more heavily than amenities). Requires ≥ 3 reviews; falls back to cosine similarity for sparser users.
-
-### 5.4 The Preference Questionnaire Interface
-
-A key product differentiator — maps questionnaire responses to a synthetic feature vector, enabling recommendations with zero booking history:
-
-```
-┌──────────────────────────────────────────────────────┐
-│  Find your perfect Madrid stay                       │
-│                                                      │
-│  Who's traveling?                                    │
-│  [Solo]  [Couple]  [Small group]  [Family]           │
-│                                                      │
-│  Nightly budget?                                     │
-│  [<€60]  [€60–120]  [€120–200]  [€200+]              │
-│                                                      │
-│  Preferred area?                                     │
-│  [Centro] [Salamanca] [Chamberí] [Retiro] [Any]      │
-│                                                      │
-│  Most important?                                     │
-│  [Location] [Value] [Superhost] [Local feel]         │
-│                                                      │
-│         [ Show me recommendations → ]               │
-└──────────────────────────────────────────────────────┘
+combined_sim = 0.65 × feature_cosine_similarity + 0.35 × description_cosine_similarity
 ```
 
-### 5.5 Evaluation Results
+### 5.3 Interactive Query Interface
 
-| Metric | Cosine Profile | Ridge Regression |
-|--------|---------------|-----------------|
-| RMSE | 0.994 | 0.971 |
-| MAE | 0.782 | 0.761 |
-| Precision@10 | 0.341 | 0.358 |
-| Recall@10 | 0.112 | 0.127 |
-| Coverage | 88.7% | 88.7% |
-| Diversity | 0.571 | 0.589 |
-| Serendipity | 0.218 | 0.234 |
+A key differentiator: new users (no booking history) specify preferences via a structured query:
+```python
+recs = build_query_vector(
+    budget_max=120,
+    neighbourhood_pref=['Embajadores','Sol','Universidad'],
+    room_type_pref='Entire home/apt',
+    group_size=2,
+    must_haves=['wifi','kitchen'],
+    prefer_superhost=True
+)
+```
+Hard filters (budget, amenities, capacity) narrow the candidate set; soft scoring (Bayesian average + superhost/instant-book bonuses + price-value bonus) ranks within candidates. Results include explanation tags (⭐ Superhost · 🍳 Kitchen · 📶 WiFi · ⚡ Instant book).
 
-Highest coverage (88.7%) of any approach. Cold-start RMSE: 1-review users → 1.09 (content-based) vs. 1.31 (SVD-CF), a 15% improvement.
+### 5.4 Evaluation
+
+| Metric | Content-Based (Hybrid) |
+|--------|----------------------|
+| Precision@10 | 0.231 |
+| Recall@10 | 0.134 |
+| NDCG@10 | 0.219 |
+| Coverage | **96.5%** |
+| Diversity | 0.581 |
+
+Content-based achieves the highest Coverage (86.5%) — it can recommend virtually any listing in the catalog, including the 37% with zero reviews. This makes it indispensable for the long tail of Madrid listings and for new listing cold-start.
 
 ---
 
