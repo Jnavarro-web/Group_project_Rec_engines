@@ -235,7 +235,7 @@ Content-based filtering recommends listings similar to a traveler's stated prefe
 
 ### 5.2 Feature Engineering
 
-We build a 45-dimensional listing feature vector (Section 2.2) supplemented by a 150-dimensional TF-IDF description embedding. The hybrid similarity score:
+We build a 61-dimensional one listing feature vector (Section 2.2) supplemented by a 150-dimensional TF-IDF description embedding. The hybrid similarity score:
 ```
 combined_sim = 0.65 × feature_cosine_similarity + 0.35 × description_cosine_similarity
 ```
@@ -259,11 +259,11 @@ Hard filters (budget, amenities, capacity) narrow the candidate set; soft scorin
 
 | Metric | Content-Based (Hybrid) |
 |--------|----------------------|
-| Precision@10 | 0.231 |
-| Recall@10 | 0.134 |
-| NDCG@10 | 0.219 |
+| Precision@10 | 0.2487 |
+| Recall@10 | 0.0142 |
+| NDCG@10 | 0.2812 |
 | Coverage | **96.5%** |
-| Diversity | 0.581 |
+| Diversity | 0.0442 |
 
 Content-based achieves the highest Coverage (96.5%) — it can recommend virtually any listing in the catalog, including the 37% with zero reviews. This makes it indispensable for the long tail of Madrid listings and for new listing cold-start.
 
