@@ -1,4 +1,4 @@
-# GROUP 2 — End-to-End Apartment Recommendation System
+# GROUP 12 — End-to-End Apartment Recommendation System
 ## Full Report — Inside Airbnb Madrid Dataset
 
 **Team:** Jimena Navarro - Sofia Serrantes - Berni Andrade - Paula Evangelista - Tessa Correig -  Daniel Teixidor
