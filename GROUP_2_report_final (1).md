@@ -146,7 +146,7 @@ Top Bayesian Average listings span central barrios — Cortes, Embajadores, Sol,
 | Diversity | 0.002 |
 | Serendipity | 0.000 |
 
-RMSE and MAE are computed here because the non-personalized model produces explicit rating estimates — the only model in our pipeline for which these metrics are meaningful. Ranking metrics (Precision@10, Recall@10, NDCG@10) are near zero by construction: the system always returns the same global top-10 for every user, so the specific listing a traveller actually visited almost never appears in that list. Coverage of 0.04% — just ~10 listings out of 24,958 ever recommended — is the defining structural weakness and sets our performance floor. Every personalized approach must surpass Precision@10 = 0.0574 to justify added complexity.
+RMSE and MAE are computed here because the non-personalized model produces explicit rating estimates, the only model in our pipeline for which these metrics are meaningful. Ranking metrics (Precision@10, Recall@10, NDCG@10) are near zero by construction: the system always returns the same global top-10 for every user, so the specific listing a traveller actually visited almost never appears in that list. Coverage of 0.04%, just 10 listings aprox out of 24,958 ever recommended, is the defining structural weakness and sets our performance floor. Every personalized approach must surpass Precision@10 = 0.0574 to justify added complexity.
 
 ---
 
