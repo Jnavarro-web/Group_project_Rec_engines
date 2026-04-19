@@ -1,7 +1,7 @@
 # GROUP 12 — Executive Summary
 ## End-to-End Apartment Recommendation System — Inside Airbnb Madrid
 
-**Team:** Jimena Navarro · Sofia Serrantes · Berni Andrade · Paula Evangelista · Tessa Correig · Daniel Teixidor
+**Team:** Jimena Navarro · Sofia Serantes · Bernarda Andrade · Paula Evangelista · Tessa Correig · Daniel Teixidor
 
 ---
 
