@@ -1,7 +1,7 @@
 # GROUP 2 — End-to-End Apartment Recommendation System
 ## Full Report — Inside Airbnb Madrid Dataset
 
-**Team:** Sofia Navarro · Marco Vidal · Lena Brandt · James O'Brien · Yuki Tanaka  
+**Team:** Jimena Navarro - Tessa Correig - Sofía Serantes - Paula Evangelista - Bernarda Andrade - Daniel Teixidor
 **Course:** Recommender Systems | Sessions 12–24  
 **Submission:** Session 24
 
