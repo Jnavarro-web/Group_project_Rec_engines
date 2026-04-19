@@ -459,7 +459,7 @@ This project delivers a complete end-to-end recommendation pipeline for Madrid A
 | Member | Primary Role | Sections | Hours |
 |--------|-------------|----------|-------|
 | Jimena Navarro | Domain analysis, EDA, data preprocessing | §1, §2 | ~12h |
-| Sofia Serrantes | Non-personalized recommender, CF support | §3, §4 (partial) | ~11h |
+| Sofia Serantes | Non-personalized recommender, CF support | §3, §4 (partial) | ~11h |
 | Berni Andrade | Content-based recommender, feature engineering, query interface | §2 (feature eng.), §5 | ~12h |
 | Paula Evangelista | Context-aware model, evaluation framework (NB05) | §6, §7 | ~13h |
 | Tessa Correig | Business case, bias analysis, deployment design, Streamlit prototype | §8, §9 | ~10h |
