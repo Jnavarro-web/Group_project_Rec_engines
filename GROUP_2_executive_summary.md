@@ -1,7 +1,7 @@
 # GROUP 2 — Executive Summary
 ## End-to-End Apartment Recommendation System — Inside Airbnb Madrid
 
-**Team:** Sofia Navarro · Marco Vidal · Lena Brandt · James O'Brien · Yuki Tanaka
+**Team:** Jimena Navarro - Tessa Correig - Sofía Serantes - Paula Evangelista - Bernarda Andrade - Daniel Teixidor
 
 ---
 
